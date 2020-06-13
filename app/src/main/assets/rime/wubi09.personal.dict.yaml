@@ -1,0 +1,107 @@
+# Rime dictionary: wubi09.personal
+# encoding: utf-8
+# 个人使用词库。如人名等信息
+# Changelog
+
+---
+name: wubi09.personal
+version: "0.1"
+sort: by_weight
+columns:
+  - text
+  - code
+  - weight
+  - stem
+encoder:
+  exclude_patterns:
+    - '^z.*$'
+  rules:
+    - length_equal: 2
+      formula: "AaAbBaBb"
+    - length_equal: 3
+      formula: "AaBaCaCb"
+    - length_in_range: [4, 10]
+      formula: "AaBaCaZa" 
+...
+# table begins
+刘汪洋	yiiu
+冉思银	mlqv
+胡珂	degs
+秦祝成	dodn
+秦哥	dwsk	5
+赵跃	krlt
+宫铭忆	pqnn
+王凌云	wufc
+王箫晗	gtjw
+刘志昊	yfjg
+马言剑	cywi
+邵正宇	vgpf
+晖哥	jpsk
+王承晖	gbjp
+褚静萱	pgap
+宁哥	pssk
+赵璐璐	kggl
+宇哥	pfsk
+马言剑	cywi
+李权宇	sspf
+李升文	styy
+谢锦	yhqr
+# 人名end
+http://172.30.27.111:8000/cwbase/web/login.aspx	oms
+http://office.inspur.com/	inspur
+http://git.inspur.com/	inspur
+http://edu.inspur.com/	inspur
+git config --local user.name "刘汪洋"	zgcl
+git config --local user.email "liuwangyang@inspur.com"	zgcl
+# 数据库 start
+APPROVE_BUSINESS_INDEX	zindex
+APPROVE_BUSINESS_COURSE	zcourse
+APPROVE_EXPORTALREQ	zreq
+APPROVE_ITEM_EXT	zext
+APPLY_FROM	zapf	2
+APPROVE_BUSINESS_INDEX.APPLY_FROM	zapi	3
+APPROVE_CORRECTION	zcor
+RECEIVE_NUMBER	zren
+classes/exchangedatasource.properties	zexc
+APPROVE_BUSINESS_FILE	zfil
+BUSINESS_OBJECT_TYPE	zbot
+BUSINESS_OBJECT_CODE	zboc
+# 数据库 end
+# 工作用语 start
+整包	ksqn
+办件	lmwr
+网办	mrlm
+清日志	ijfn
+走件	kgwr
+新件	uiwr
+单点	ulhk	5
+审管	pjtp
+「审批系统知识库」https://shimo.im/docs/09ff3869b54047c6	zsmzsk
+「项目反馈常见问题解决办法总结」https://shimo.im/sheets/YtwqcJ3jcJRWRDDY/MODOC	zsmwt
+项目配置：https://www.evernote.com/l/AteH-VUNU1NCKqY8xq4hd0FL_jKotmjmeyo/	zxmp
+https://www.evernote.com/l/AtePI9d4voNN6bx924C9VHQ7E4pFe46DwmU/	zllq
+系统日志：https://www.evernote.com/l/AtflO8SZu7xOMqQa1kDBxFdl7kkuuneQWK8/	zrz
+D:\Softs\dev\nacos\bin\startup.cmd	znac
+高拍仪	yrwy
+高拍仪	yrw
+易登记	jwyn
+易登记	jwy
+制证	rmyg
+重推	tgrr
+已办	nnlm
+bsNum	bsnu
+准予许可	ucys	5
+补齐补正	pypg	5
+流水号	iikg	5
+工改	aant	5
+bsp	bsp	5
+配置项	slad
+tomcat	tomcat
+推件	rrwr	5
+建表	vgge	5
+# 工作用语 end
+# 地名 start
+唐冶	ovuc
+宝丰	pgdh
+章丘	ujrg
+# 地名 start

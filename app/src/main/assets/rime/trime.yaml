@@ -1,26 +1,27 @@
 # Trime default style settings
 # encoding: utf-8
 
-config_version: "3.0"
-name: 預設 #方案名稱
-author: osfans #作者資訊
+config_version: "1.0"
+name: 预设 #方案名称
+author: sloera #作者资源
 
 style:
-  auto_caps: false #自動句首大寫:true|false|ascii
+  auto_caps: false #自动句首大写:true:打开|false:关闭|ascii:仅英文模式句首大写
   background_dim_amount: 0.5
   candidate_font: han.ttf #候選字型
   candidate_padding: 5 #候選項內邊距
   candidate_spacing: 0.5 #候選間距
   candidate_text_size: 22 #候選字號
-  candidate_use_cursor: true #高亮候選項
+  candidate_use_cursor: true #候选焦点高亮
   candidate_view_height: 28 #候選區高度
   color_scheme: default #配色方案
   comment_font: comment.ttf #編碼提示字型
   comment_height: 12 #編碼提示區高度
-  comment_on_top: true #編碼提示在上方或右側
+  comment_on_top: true #編碼提示在上方或右側  候选项注释在上方或右侧(true:在上方;false:在右侧)
   comment_text_size: 12 #編碼提示字號
-  hanb_font: hanb.ttf #擴充字型
-  horizontal: true #水平模式
+  hanb_font: hanb.ttf #擴充字型 后备字体。用于补充候选字体（ candidate_font ）。
+  # ※ 某些特殊符号，或者很多生僻字（比如Unicode Ext-B~Ext-F的字符）在大多数手机上通常都会显示成方框或空白。 hanb_font 可以使这些字符在同文输入法里正常显示（推荐使用花园明朝B字体：HanaMinB.ttf）。您也可以直接在系统中设置fallback字体（全局生效，但需要root）。
+  horizontal: true #水平模式  改变方向键的功能(true:方向键适配横排候选;false:方向键适配竖排候选)
   horizontal_gap: 1 #鍵水平間距
   layout: #懸浮窗口設置
     position: fixed #位置：left|right|left_up|right_up|fixed|bottom_left|bottom_right|top_left|top_right(left、right需要>=Android5.0)
@@ -43,6 +44,7 @@ style:
     alpha: 0xdd #透明度(0-255)
     elevation: 5 #陰影(>=Android5.0)
     background: background.png #顏色或者backgrounds目錄下的圖片文件名
+    # background: sloera.jpg #顏色或者backgrounds目錄下的圖片文件名
     movable: once #是否可移動窗口，或僅移動一次 true|false|once
   window: #懸浮窗口組件
     - {start: "", move: 'ㄓ ', end: ""}
@@ -53,28 +55,30 @@ style:
   key_long_text_size: 14 #長標籤字號
   key_text_size: 22 #鍵字號
   key_width: 10.0 #鍵寬，佔螢幕寬的百分比
-  keyboards: [.default, letter, number, symbols] #鍵盤配置：自動鍵盤、字母、數字、符號
+  keyboards: [.default, letter, number, symbols] # 键盘配置。除主键盘外，其它需要用到的键盘都要在这里声明。 鍵盤配置：自動鍵盤、字母、數字、符號
   label_text_size: 22 #標籤字號
-  label_font: label.ttf #編標籤字型
+  label_font: label.ttf #編標籤字型 悬浮窗候选项序号字体
   latin_font: latin.ttf #西文字型
-  latin_locale: en_US #西文語言
-  locale: zh_TW #預設語言 zh_TW,zh_CN,zh_HK,""
+  latin_locale: en_US #在英文状态（ascii_mode）下，朗读按键时所用的语言 西文語言
+  locale: zh_CN #在中文状态下，朗读上屏文本和按键时所用的语言。 預設語言 zh_TW,zh_CN,zh_HK,""
+  # ※ 需要先在同文设置界面开启朗读功能。朗读功能还需要手机的TTS引擎支持。可使用系统默认引擎，也可安装讯飞语记等第三方引擎。 latin_local 和 local 可以设置的语言也取决于TTS 引擎。常见的语言： zh_TW , zh_CN , zh_HK , en_US , ja_JP , ko_KR ,……
   preview_font: latin.ttf #按鍵提示字型
   preview_height: 60 #按鍵提示高度
   preview_offset: -12 #按鍵提示縱向偏移
   preview_text_size: 40 #按鍵提示字號
-  proximity_correction: true #按鍵糾錯
-  reset_ascii_mode: false #顯示鍵盤時重置爲中文狀態
+  proximity_correction: true # 将按键之间的空白区域分配给相邻的按键，避免空按（ true :打开； false :关闭）  按鍵糾錯
+  reset_ascii_mode: false #不同进程中显示键盘时重置为中文状态（ true :重置为中文； false :记忆中英状态）  顯示鍵盤時重置爲中文狀態
   round_corner: 8 #按鍵圓角半徑
   shadow_radius: 0.0 #按鍵陰影半徑
-  speech_opencc_config: s2t.json #語音輸入簡繁轉換
+  speech_opencc_config: s2t.json #语音输入简繁转换（默认值 s2t.json : 将语音识别的结果转换成繁体再上屏）  語音輸入簡繁轉換
+  # 需要配合OpenCC组件来使用。如果不需要转换，想让语音引擎按原样输出，可设为 none 。(2017-9-13开始，也可以直接注释掉)
   symbol_font: symbol.ttf #符號字型
   symbol_text_size: 10 #符號字號
-  text_font: latin.ttf #編碼字型
+  text_font: latin.ttf #編碼字型  编码字体
   #text_height: 22 #編碼區高度
   text_size: 16 #編碼區字號
   vertical_correction: -10
-  vertical_gap: 1 #鍵盤行距
+  vertical_gap: 5 #鍵盤行距
 
 fallback_colors:
   candidate_text_color: text_color
