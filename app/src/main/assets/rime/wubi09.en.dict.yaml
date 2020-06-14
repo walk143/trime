@@ -1,0 +1,42 @@
+# Rime dictionary: wubi09.en
+# encoding: utf-8
+# 英文
+# Changelog
+
+---
+name: wubi09.en
+version: "0.1"
+sort: by_weight
+columns:
+  - text
+  - code
+  - weight
+  - stem
+encoder:
+  exclude_patterns:
+    - '^z.*$'
+  rules:
+    - length_equal: 2
+      formula: "AaAbBaBb"
+    - length_equal: 3
+      formula: "AaBaCaCb"
+    - length_in_range: [4, 10]
+      formula: "AaBaCaZa" 
+...
+# table begins
+# 英文 start
+Jira	jira
+Jira	jria
+Jenkins	jenkins
+Bug	bug	5
+course	cour	5
+index	index
+synchronized	sync
+Synchronized	sync
+monitor	moni
+enter	enter
+ReentrantLock	reen
+Condition	cond
+info	info
+Lambda	lambda	3
+# 英文 end

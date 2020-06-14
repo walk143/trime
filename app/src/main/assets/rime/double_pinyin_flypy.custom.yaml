@@ -1,0 +1,12 @@
+#double_pinyin_flypy.custom.yaml
+patch:
+  #符号自定义
+  # 引用 `symbols` 文件里面的符号
+  #'punctuator/import_preset': symbols
+  #'recognizer/patterns/punct': "^/([a-z]+|[0-9])$"
+# __patch:
+# # Rx: emoji:customize:schema=double_pinyin_flypy {
+#   - patch/+:
+#       __include: emoji_suggestion:/patch
+# }
+  translator/dictionary: pinyin_simp

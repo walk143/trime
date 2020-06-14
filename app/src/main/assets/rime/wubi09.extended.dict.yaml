@@ -1,0 +1,99 @@
+# Rime dictionary: wubi09_extended
+# encoding: utf-8
+#
+# Changelog
+
+---
+name: wubi09.extended
+version: "0.1"
+sort: by_weight
+columns:
+  - text
+  - code
+  - weight
+  - stem
+import_tables:
+  - wubi09
+  - wubi09.fanti
+  - wubi09.personal
+  - wubi09.en
+  - melt
+...
+# table begins
+撸铁	rcqr
+头秃	udtm
+还没	giim
+#./git.sh push	gpush	5
+bash git.sh push	gpus	5
+bash git.sh	gpul
+想啥呢	skkn
+https://gitee.com/sloera	sloera
+https://sloera.gitee.io/	sloera
+传谣	wfye
+等下	tfg
+没的办法	irli
+推爆	rroj
+没的问题	iruj
+没的办法	irli
+没的感情	irdn
+您说	wqyu
+嗯呐	klkm
+对的	cfrq
+啊啊啊啊啊啊	kkkk	4
+好的	vr	6
+自增	thfu
+渣女	isvv
+抬棺	rcsp
+黑人抬棺	hwrs
+行行行	hhhl
+行吧	hlkc	5
+走吗	kgkc	5
+得空	hjpa	5
+好嘛	vbko	5
+轮询	lwyq	5
+置空	lfpa	5
+不要	gisv	5
+巨佬	anwf	5
+爱了	epbn	5
+傻了吧唧	wbkk
+小爱	ihep	5
+#容错
+啊	bk	5
+这个	ywph	5
+
+# 命令 start
+# oracle 启动
+lsnrctl start	oraclestart	5
+net start oracleserviceoracl	oraclestart	4
+# oracle 停止
+lsnrctl stop	oraclestop	5
+net stop oracleserviceoracl	oraclestop	4
+# rime 同步
+"C:\Program Files (x86)\Rime\weasel-0.14.3\WeaselDeployer" /sync	rime
+"C:\Program Files (x86)\Rime\weasel-0.14.3\WeaselDeployer" /deploy	rime	3
+https://t.me/RimeTWT	zrime	3
+# 命令 end
+
+
+
+# 微信表情 start
+#[无语]	zwy
+[嘿哈]	zhh	5
+嘿哈	khkw
+[捂脸]	zwl	5
+[奸笑]	zjx	5
+[机智]	zjz	5
+[皱眉]	zzm	5
+[耶]	zye	5
+[吃瓜]	zcg	5
+[加油]	zjy	5
+[汗]	zhan	5
+[天啊]	zta	5
+[社会社会]	zsh	5
+[Emm]	zem	5
+[旺柴]	zwc	5
+[好的]	zhd	5
+[打脸]	zdl	5
+[加油加油]	zjj	5
+[哇]	zwa	5
+# 微信表情 end
