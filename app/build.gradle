@@ -4,11 +4,11 @@ android {
     compileSdkVersion 'android-R'
 
     defaultConfig {
-        applicationId "com.osfans.trime"
+        applicationId "com.sloera.trime"
         minSdkVersion 29
         targetSdkVersion 29
         versionCode 20200613
-        versionName '1.0.2'
+        versionName '1.1.0'
         ndk {
             abiFilters "armeabi-v7a", "arm64-v8a", "x86_64"
         }

@@ -39,4 +39,17 @@ ReentrantLock	reen
 Condition	cond
 info	info
 Lambda	lambda	3
+debugger	debu
+nginx	nginx
+nacos	nacos
+Alright	alright
+catalina.log	catalina
+error.log	error
+localhost.log	localhost
+Oracle	oracle	5
+Mysql	mysql
+paginate	paginate
+dubbo	dubbo
+preview	preview
+crontab	crontab
 # 英文 end

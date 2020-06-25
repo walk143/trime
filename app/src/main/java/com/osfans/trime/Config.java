@@ -263,6 +263,9 @@ public class Config {
 
   public void reset() {
     schema_id = Rime.getSchemaId();
+    if (null == schema_id) {
+      schema_id = "wubi09";
+    }
     if (schema_id != null)
       mStyle = (Map<String, Object>) Rime.schema_get_value(schema_id, "style");
   }

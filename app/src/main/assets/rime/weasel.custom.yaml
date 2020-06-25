@@ -14,6 +14,12 @@ patch:
 # git-bash中英文
   "app_options/mintty.exe":
     ascii_mode: true
+# datagrip中英文
+  "app_options/datagrip64.exe":
+    ascii_mode: true
+# idea中英文
+  "app_options/idea64.exe":
+    ascii_mode: true
   #"app_options/notepad.exe":
   #  ascii_mode: true
 #设定显示托盘图标

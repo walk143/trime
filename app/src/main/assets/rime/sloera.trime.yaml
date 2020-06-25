@@ -13,7 +13,7 @@ height:
   4: &jpgd4 55 #主键盘
   5: &jpgd5 39.5 #符号键盘
   6: &hgap 2 #键盘列间隙宽
-  7: &vgap 13 #键盘竖缝大小  键盘行距
+  7: &vgap 0 #键盘竖缝大小  键盘行距
   8: &hxgd 32 # 候选区高度
 
 #键盘高度
@@ -150,53 +150,6 @@ colors:
   
 #配色方案
 preset_color_schemes:
-  default:
-    name: "标准配色！"  #方案名称
-    author: 风花絮 #作者信息
-    back_color: *color2 #候选区背景状态栏
-    candidate_separator_color: *color2 #候选分割背景
-    candidate_text_color: *color1 #候选文本
-    comment_text_color: *color3 #提示
-    hilited_back_color: *color2 #高亮编码背景
-    hilited_candidate_back_color: *color2 #高亮候选背景
-    hilited_candidate_text_color: *color6 #高亮候选文本
-    hilited_comment_text_color: *color1 #高亮提示
-    hilited_key_back_color: *color6 #高亮按键背景
-    hilited_key_symbol_color: *color2 #高亮按键符号
-    hilited_key_text_color: *color1 #高亮按键文本
-    hilited_off_key_back_color: *color2 #高亮按键关闭状态背景
-    hilited_off_key_text_color: *color1 #高亮按键关闭状态文本
-    hilited_text_color: *color1 #高亮编码
-    key_back_color: *color2 #按键背景
-    key_symbol_color: *color8 #按键符号
-    key_text_color: *color1 #按键文本
-    keyboard_back_color: *color3 #键盘背景
-    label_color: *color6 #标签
-    off_key_back_color: *color4  #按键关闭状态背景
-    off_key_text_color: *color8 #按键关闭状态文本
-    preview_back_color: *color4 #按键提示背景
-    preview_text_color: *color6 #按键提示文本
-    text_color: *color6 #编码
-    text_back_color: *color2 #编码区背景
-    bkg: *color2 #空格键背景色
-    tkg: *color1 #空格键文字颜色
-    benter: *color6 #回车键背景色
-    tenter: *color2 #回车键文字颜色
-    bgn: *color4 #功能键背景色
-    tgn: *color2 #功能键文字颜色
-    bbs: *color4 #退格键背景色
-    tbs: *color2 #退格键文字颜色
-    baoe: *color2 #aoeiu背景色
-    taoe: *color6 #aoeiu文字颜色
-    bh1: *color2 #第一行背景色
-    th1: *color1 #第一行文字颜色
-    bh2: *color2 #第二行背景色
-    th2: *color1 #第二行文字颜色
-    bh3: *color2 #第三行背景色
-    th3: *color1 #第三行文字颜色
-    bh4: *color2 #第四行背景色
-    th4: *color1 #第四行文字颜色
-
 #--------配色开始----------------#
   sloera:
     # description: |
@@ -269,6 +222,8 @@ preset_color_schemes:
     Blue: 0xff0000FF #Blue 纯蓝
     Gold: 0xffFFD700 #Gold 金色
   
+
+
 #--------配色结束----------------#
     
 #键盘布局
@@ -300,16 +255,16 @@ preset_keyboards:
       - {click: d, long_click: copy2, swipe_up: copy2, swipe_down: '[', hint: '[', key_back_color: bh2, key_text_color: th2}
       - {click: f, long_click: paste2, swipe_up: paste2, swipe_down: ']', hint: ']', key_back_color: bh2, key_text_color: th2}
       - {click: g, long_click: Deploy, swipe_up: '%', swipe_down: "date_time", key_back_color: bh2, key_text_color: th2, hint: '时间'}
-      - {width: 2, key_back_color: bh2, key_text_color: th2}
+      # - {width: 2, key_back_color: bh2, key_text_color: th2}
       - {click: h, long_click: K_menu2, swipe_up: '!', swipe_down: "+", key_back_color: bh2, key_text_color: th2, hint: '+'}
       - {click: j, long_click: Theme_settings, swipe_up: '&', swipe_down: '-', hint: '-', key_back_color: bh2, key_text_color: th2}
       - {click: k, long_click: Color_switch, swipe_up: '*', swipe_down: '{', hint: '{', key_back_color: bh2, key_text_color: th2}
-      - {click: l, long_click: '(){Left}', swipe_up: '(){Left}', swipe_down: '}', hint: '}', key_back_color: bh2, key_text_color: th2}
+      - {click: l, long_click: Menu, swipe_up: '(){Left}', swipe_down: '}', hint: '}', key_back_color: bh2, key_text_color: th2}
       # - {width: 5, key_back_color: bh2, key_text_color: th2,click: '''', long_click: '"'}
 
 
       # - {width: 5, key_back_color: bh2, key_text_color: th2}
-      - {click: Mode_switch, width: 10, hilited_key_back_color: benter, key_back_color: bbs, key_text_color: tbs}
+      - {click: Shift_L, width: 10, hilited_key_back_color: benter, key_back_color: bbs, key_text_color: tbs}
       - {click: z, long_click: '`', swipe_up: '`', swipe_down: '[]{Left}',key_long_text_size: 22, key_back_color: bh3, key_text_color: th3}
       - {click: x, long_click: '/', swipe_up: '/', swipe_down: '{}{Left}', key_back_color: bh3, key_text_color: th3}
       - {click: c, long_click: '=', swipe_up: '=', swipe_down: ' ', key_back_color: bh3, key_text_color: th3}
@@ -331,13 +286,17 @@ preset_keyboards:
       # - {click: '9', long_click: '(', composing: ';',}
       # - {click: '0', long_click: ')', composing: ';',}
       
-      - {click: Keyboard_number, long_click: Menu, width: 11, key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_bqrw, long_click: Theme_settings, width: 11, key_text_size: "18", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kao, long_click: '?', key_text_size: "18", key_back_color: bh4, key_text_color: th4}
-      - {click: ',', label: '，',composing: ';',width: 13, long_click: '<>{Left}', key_back_color: bh4, key_text_color: th4}
-      - {click: space, long_click: VOICE_ASSIST, swipe_left: "Left", swipe_right: "Right", swipe_up: Schema_switchcn, width: 24, key_back_color: bkg, key_text_color: tkg}
-      - {click: '.', label: '。',composing: '''',width: 13, long_click: '?', key_back_color: bh4, key_text_color: th4}
-      - {click: Return, swipe_up: Escape, width: 18, key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_number, long_click: Keyboard_bqrw, width: 13, key_back_color: bgn, key_text_color: tgn}
+      # - {click: Keyboard_bqrw, long_click: Theme_settings, width: 10, key_text_size: "18", key_back_color: bgn, key_text_color: tgn}
+      # - {click: Keyboard_kao, long_click: '?', key_text_size: "18", key_back_color: bh4, key_text_color: th4}
+      - {click: Left, width: 10, key_back_color: bh4, key_text_color: th4}
+      - {click: ',', label: '，',composing: ';', width: 15, long_click: '''', key_back_color: bh4, key_text_color: th4}
+
+      - {click: space, long_click: VOICE_ASSIST, swipe_left: "Left", swipe_right: "Right", swipe_up: Mode_switch, width: 24, key_back_color: bkg, key_text_color: tkg}
+      - {click: '.', label: '。',composing: '''',width: 15, long_click: '"', key_back_color: bh4, key_text_color: th4}
+      - {click: Right, width: 10, key_back_color: bh4,key_text_color: th4}
+      - {click: Return, swipe_up: Escape, width: 13, key_back_color: benter, key_text_color: tenter}
+      - {height: 30, width: 100}
 
   letter:
     author: "暖暖"
@@ -3199,7 +3158,7 @@ preset_keys:
   VOLUME_UP: {label: 音量+, send: VOLUME_UP}
   VOLUME_MUTE: {label: 静音, send: VOLUME_MUTE}
   # 编辑
-  Shift_L: {label: Shift, preview: '⇪', functional: false, send: Shift_L}
+  Shift_L: {label: ⇪, preview: '⇪', functional: false, send: Shift_L, shift_lock: long}
   Return: {label: Enter, preview: '↩', functional: false, send: Return}
   Hide: {label: 隐藏, send: BACK}
   BackSpace: {label: 退格, preview: '⇦', repeatable: true, functional: false, send: BackSpace}

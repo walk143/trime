@@ -1,0 +1,47 @@
+*
+!.gitignore
+!README.md
+!*.custom.*
+# !symbols.yaml
+!wubi86.dict.yaml
+!wubi86.schema.yaml
+!double_pinyin_flypy.custom.yaml
+!double_pinyin_flypy.schema.yaml
+
+!installation.yaml
+
+# 便捷提交脚本
+!git.sh
+
+!sync/
+!sync/**
+
+!wubi09.schema.yaml
+!wubi09.dict.yaml
+!wubi09.extended.dict.yaml
+!wubi09.fanti.dict.yaml
+!pinyin_simp.dict.yaml
+!wubi09.personal.dict.yaml
+!wubi09.en.dict.yaml
+!rime.lua
+!key_bindings.yaml
+!punctuation.yaml
+
+# 同文
+!opencc/
+!opencc/**
+!default.yaml
+# !*.schema.*
+# !*.dict.*
+!symbols.yaml
+!essay.txt
+!trime.yaml
+# !*.trime.yaml
+# !installation.yaml
+!backgrounds/
+!backgrounds/**
+!fonts/
+!fonts/**
+!sloera.trime.yaml
+!x_55.trime.yaml
+!melt.dict.yaml

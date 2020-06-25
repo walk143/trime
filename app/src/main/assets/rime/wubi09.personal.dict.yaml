@@ -49,8 +49,10 @@ encoder:
 # 人名end
 http://172.30.27.111:8000/cwbase/web/login.aspx	oms
 http://office.inspur.com/	inspur
-http://gitlab.inspur.com/	inspur
+http://git.inspur.com/	inspur
 http://edu.inspur.com/	inspur
+git config --local user.name "刘汪洋"	zgcl
+git config --local user.email "liuwangyang@inspur.com"	zgcl
 # 数据库 start
 APPROVE_BUSINESS_INDEX	zindex
 APPROVE_BUSINESS_COURSE	zcourse
@@ -62,6 +64,8 @@ APPROVE_CORRECTION	zcor
 RECEIVE_NUMBER	zren
 classes/exchangedatasource.properties	zexc
 APPROVE_BUSINESS_FILE	zfil
+BUSINESS_OBJECT_TYPE	zbot
+BUSINESS_OBJECT_CODE	zboc
 # 数据库 end
 # 工作用语 start
 整包	ksqn
@@ -72,10 +76,12 @@ APPROVE_BUSINESS_FILE	zfil
 新件	uiwr
 单点	ulhk	5
 审管	pjtp
-「审批系统知识库」https://shimo.im/doc/WTH3p2IMJa00nNdD?r=M0D328	zsmzsk
+「审批系统知识库」https://shimo.im/docs/09ff3869b54047c6	zsmzsk
+「项目反馈常见问题解决办法总结」https://shimo.im/sheets/YtwqcJ3jcJRWRDDY/MODOC	zsmwt
 项目配置：https://www.evernote.com/l/AteH-VUNU1NCKqY8xq4hd0FL_jKotmjmeyo/	zxmp
 https://www.evernote.com/l/AtePI9d4voNN6bx924C9VHQ7E4pFe46DwmU/	zllq
 系统日志：https://www.evernote.com/l/AtflO8SZu7xOMqQa1kDBxFdl7kkuuneQWK8/	zrz
+D:\Softs\dev\nacos\bin\startup.cmd	znac
 高拍仪	yrwy
 高拍仪	yrw
 易登记	jwyn
@@ -87,8 +93,15 @@ bsNum	bsnu
 准予许可	ucys	5
 补齐补正	pypg	5
 流水号	iikg	5
+工改	aant	5
+bsp	bsp	5
+配置项	slad
+tomcat	tomcat
+推件	rrwr	5
+建表	vgge	5
 # 工作用语 end
 # 地名 start
 唐冶	ovuc
 宝丰	pgdh
+章丘	ujrg
 # 地名 start
