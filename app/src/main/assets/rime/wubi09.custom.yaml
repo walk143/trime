@@ -90,3 +90,4 @@ patch:
   "style/horizontal": false #横竖排 
   "style/font_face": "楷体"
   "style/font_point": 16
+  # "style/inline_preedit": true #輸入碼內嵌

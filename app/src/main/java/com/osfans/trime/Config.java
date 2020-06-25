@@ -101,12 +101,12 @@ public class Config {
     boolean isOverwrite = Function.isDiffVer(context);
     String defaultFile = "trime.yaml";
     if (isOverwrite) {
-      copyFileOrDir(context, RIME, true);
+      copyFileOrDir(context, "", true);
     } else if (isExist) {
-      String path = new File(RIME, defaultFile).getPath();
+      String path = new File("", defaultFile).getPath();
       copyFileOrDir(context, path, false);
     } else {
-      copyFileOrDir(context, RIME, false);
+      copyFileOrDir(context, "", false);
     }
     while (!new File(getSharedDataDir(), defaultFile).exists()) {
       SystemClock.sleep(3000);
@@ -163,8 +163,8 @@ public class Config {
     String assets[] = null;
     try {
       assets = assetManager.list(path);
-    } catch (IOException ex) {
-      Log.e(TAG, "I/O Exception", ex);
+    } catch (Exception e) {
+      e.printStackTrace();
     }
     return assets;
   }
@@ -173,7 +173,8 @@ public class Config {
     AssetManager assetManager = context.getAssets();
     String assets[] = null;
     try {
-      assets = assetManager.list(path);
+      String assetPath = new File(RIME, path).getPath();
+      assets = assetManager.list(assetPath);
       if (assets.length == 0) {
         // Files
         copyFile(context, path, overwrite); 
@@ -182,12 +183,12 @@ public class Config {
         File dir = new File(getSharedDataDir(), path);
         if (!dir.exists()) dir.mkdir();
         for (int i = 0; i < assets.length; ++i) {
-          String assetPath = new File(path, assets[i]).getPath();
-          copyFileOrDir(context, assetPath, overwrite);
+          String subPath = new File(path, assets[i]).getPath();
+          copyFileOrDir(context, subPath, overwrite);
         }
       }
-    } catch (IOException ex) {
-      Log.e(TAG, "I/O Exception", ex);
+    } catch (Exception e) {
+      e.printStackTrace();
       return false;
     }
     return true;
@@ -198,8 +199,9 @@ public class Config {
     InputStream in = null;
     OutputStream out = null;
     try {
-      in = assetManager.open(filename);
-      String newFileName = new File(filename.endsWith(".bin") ? getUserDataDir() : getSharedDataDir(), filename.length() >= 5 ? filename.substring(5) : "").getPath();
+      String assetPath = new File(RIME, filename).getPath();
+      in = assetManager.open(assetPath);
+      String newFileName = new File(filename.endsWith(".bin") ? getUserDataDir() : getSharedDataDir(), filename).getPath();
       if (new File(newFileName).exists() && !overwrite) return true;
       out = new FileOutputStream(newFileName);
       int BLK_SIZE = 1024;
@@ -214,7 +216,7 @@ public class Config {
       out.close();
       out = null;
     } catch (Exception e) {
-      Log.e(TAG, e.getMessage());
+      e.printStackTrace();
       return false;
     }
     return true;
@@ -256,13 +258,16 @@ public class Config {
       Rime.setShowSwitches(getShowSwitches());
       reset();
     } catch (Exception e) {
-      Log.e(TAG, e.getMessage());
+      e.printStackTrace();
       setTheme(defaultName);
     }
   }
 
   public void reset() {
     schema_id = Rime.getSchemaId();
+    if (null == schema_id) {
+      schema_id = "wubi09";
+    }
     if (schema_id != null)
       mStyle = (Map<String, Object>) Rime.schema_get_value(schema_id, "style");
   }

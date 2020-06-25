@@ -57,9 +57,19 @@ https://sloera.gitee.io/	sloera
 爱了	epbn	5
 傻了吧唧	wbkk
 小爱	ihep	5
+#右到左转义字符
+‮	zrlo
+#左到右转义字符
+‭	zlro
+好的呢	vrk	5
+入参	tycd	5
+听你的	kwr	5
+
 #容错
 啊	bk	5
 这个	ywph	5
+
+
 
 # 命令 start
 # oracle 启动
@@ -72,6 +82,9 @@ net stop oracleserviceoracl	oraclestop	4
 "C:\Program Files (x86)\Rime\weasel-0.14.3\WeaselDeployer" /sync	rime
 "C:\Program Files (x86)\Rime\weasel-0.14.3\WeaselDeployer" /deploy	rime	3
 https://t.me/RimeTWT	zrime	3
+
+https://shimo.im/dashboard/used	zsm
+https://fanyi.baidu.com/#en/zh/	zfy
 # 命令 end
 
 
@@ -97,3 +110,6 @@ https://t.me/RimeTWT	zrime	3
 [加油加油]	zjj	5
 [哇]	zwa	5
 # 微信表情 end
+#Emoji start
+🙏	zprayer
+#Emoji end

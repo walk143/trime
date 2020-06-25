@@ -1,9 +1,9 @@
 customization:
   distribution_code_name: Weasel
-  distribution_version: 0.13.0
+  distribution_version: 0.14.3
   generator: "Rime::SwitcherSettings"
-  modified_time: "Sun Jun 23 10:21:28 2019"
-  rime_version: 1.4.0
+  modified_time: "Mon May 11 21:25:24 2020"
+  rime_version: 1.5.3
 patch:
   "ascii_composer/good_old_caps_lock": true
   "ascii_composer/switch_key":
@@ -15,12 +15,9 @@ patch:
   "key_binder/bindings":
     - {accept: bracketleft, send: Page_Up, when: paging}
     - {accept: bracketright, send: Page_Down, when: has_menu}
+  "menu/page_size": 7
   schema_list:
-    - {schema: wubi86}
     - {schema: double_pinyin_flypy}
     - {schema: wubi09}
-
-  "menu/page_size": 7
   "switcher/hotkeys":
     - "Control+Shift+F7"
-    # 有些程序无法切换，可选点击win状态栏，然后切换。

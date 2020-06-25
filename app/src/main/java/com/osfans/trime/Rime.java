@@ -19,6 +19,8 @@
 package com.osfans.trime;
 
 import android.content.Context;
+import android.util.Log;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,6 +36,7 @@ import java.util.logging.Logger;
  *     href="https://github.com/BYVoid/OpenCC">OpenCC</a>
  */
 public class Rime {
+  private static final String TAG = "Rime";
   /** Rime編碼區 */
   public static class RimeComposition {
     int length;
@@ -276,6 +279,7 @@ public class Rime {
     mSchemaList = get_schema_list();
     String schema_id = getSchemaId();
     mSchema = new RimeSchema(schema_id);
+    android.util.Log.e(TAG, "initSchema: "+schema_id+"\t"+mSchema);
     getStatus();
   }
 
@@ -355,6 +359,9 @@ public class Rime {
   }
 
   public static RimeCandidate[] getCandidates() {
+    if (null == mSchema) {
+      initSchema();
+    }
     if (!isComposing() && showSwitches) return mSchema.getCandidates();
     return mContext.getCandidates();
   }
@@ -422,6 +429,10 @@ public class Rime {
   }
 
   public static String getSchemaId() {
+    if (null == get_current_schema()) {
+      android.util.Log.e(TAG, "getSchemaId: 为空");
+      return "wubi09";
+    }
     return get_current_schema();
   }
 
@@ -508,6 +519,7 @@ public class Rime {
     switch (message_type) {
       case "schema":
         initSchema();
+        android.util.Log.d(TAG, "onMessage: initSchema");
         if (trime != null) {
           trime.initKeyboard();
           trime.updateComposing();
@@ -536,11 +548,10 @@ public class Rime {
   }
 
   public static void check(boolean full_check) {
-    start_maintenance(full_check);
-    // if (start_maintenance(full_check) && is_maintenance_mode())
-    // {
-    //   join_maintenance_thread();
-    // }
+    if (start_maintenance(full_check) && is_maintenance_mode())
+    {
+       join_maintenance_thread();
+    }
 }
 
   public static boolean syncUserData(Context context) {

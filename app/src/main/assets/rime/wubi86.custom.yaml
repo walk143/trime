@@ -1,0 +1,41 @@
+#wubi86.custom.yaml
+patch:
+  #符号自定义
+  # 引用 `symbols` 文件里面的符号
+  #'punctuator/import_preset': symbols
+  'punctuator/import_preset': symbols.custom
+  'recognizer/patterns/punct': "^/([a-z]+|[0-9])$"
+#__patch:
+# Rx: emoji:customize:schema=wubi86 {
+#  - patch/+:
+#      __include: emoji_suggestion:/patch
+# }
+  reverse_lookup/dictionary: double_pinyin
+  reverse_lookup/prism: double_pinyin
+  reverse_lookup/tips: 〔双拼〕
+  reverse_lookup/preedit_format: []
+  reverse_lookup/prefix: "`"
+  switches:
+    - name: ascii_mode
+      reset: 0
+      states: [ 中文, 英文 ]
+    - name: full_shape
+      states: [ 半角, 全角 ]
+    - name: extended_charset
+      states: [ 常用, 扩展集 ]
+    - name: ascii_punct
+      states: [ 。，, ．， ]
+
+  # speller/max_code_length: 4                      # 最长 4 码
+  # speller/auto_select: true                       # 顶字上屏
+  # speller/auto_select_unique_candidate: true      # 无重码自动上屏
+
+  # engine/filters:
+  #   - uniquifier
+
+  "key_binder/bindings":
+    - { when: has_menu, accept: semicolon, send: 2 }
+    #分号选第2候选字
+    - { when: has_menu, accept: apostrophe, send: 3 }
+    #单引号选第3候选字
+     # minus/减号，equal/等号，comma/逗号，period/句号，exclam/感叹号，numbersign/井号，percent/百分号，semicolon/分号，apostrophe/单引号,brcketleft/左中括号,bracketright/右中括号
